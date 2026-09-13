@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
-import { User } from '../models/User.js'
-import { Team } from '../models/Team.js'
-import { Activity } from '../models/Activity.js'
-import { Leaderboard } from '../models/Leaderboard.js'
-import { Workout } from '../models/Workout.js'
+import { User } from '../models/User.ts'
+import { Team } from '../models/Team.ts'
+import { Activity } from '../models/Activity.ts'
+import { Leaderboard } from '../models/Leaderboard.ts'
+import { Workout } from '../models/Workout.ts'
 
 dotenv.config()
 

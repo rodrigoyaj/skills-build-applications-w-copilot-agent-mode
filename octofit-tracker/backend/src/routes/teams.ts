@@ -1,7 +1,8 @@
-import { Router, Request, Response } from 'express'
-import { Team } from '../models/Team.js'
+import express from 'express'
+import type { Request, Response } from 'express'
+import { Team } from '../models/Team.ts'
 
-const router = Router()
+const router = express.Router()
 
 // Get all teams
 router.get('/', async (req: Request, res: Response) => {

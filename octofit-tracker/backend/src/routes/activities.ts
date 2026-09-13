@@ -1,7 +1,8 @@
-import { Router, Request, Response } from 'express'
-import { Activity } from '../models/Activity.js'
+import express from 'express'
+import type { Request, Response } from 'express'
+import { Activity } from '../models/Activity.ts'
 
-const router = Router()
+const router = express.Router()
 
 // Get all activities
 router.get('/', async (req: Request, res: Response) => {

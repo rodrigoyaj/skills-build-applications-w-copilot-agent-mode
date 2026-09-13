@@ -1,7 +1,8 @@
-import { Router, Request, Response } from 'express'
-import { Leaderboard } from '../models/Leaderboard.js'
+import express from 'express'
+import type { Request, Response } from 'express'
+import { Leaderboard } from '../models/Leaderboard.ts'
 
-const router = Router()
+const router = express.Router()
 
 // Get leaderboard
 router.get('/', async (req: Request, res: Response) => {
