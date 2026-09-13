@@ -1,3 +1,12 @@
+/* Main app styles */
+:root {
+  --primary-color: #007bff;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,18 +15,126 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  text-align: center;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 1.5rem;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header h1 {
-  color: #007bff;
-  margin-bottom: 0.5rem;
+main {
+  flex: 1;
 }
 
-header p {
+/* Navbar styles */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Card styles */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* List group styles */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* Badge styles */
+.badge {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Table styles */
+.table {
+  background-color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Loading spinner */
+.spinner-border {
+  margin: 2rem auto;
+}
+
+/* Alert styles */
+.alert {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Responsive utilities */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #212529;
+}
+
+.lead {
+  font-size: 1.15rem;
   color: #6c757d;
-  font-size: 1.1rem;
 }
+
+/* Custom button styles */
+.btn {
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout utilities */
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
